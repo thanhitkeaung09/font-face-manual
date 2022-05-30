@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,500&family=Montserrat:wght@300;400;500;600&family=Padauk:wght@400;700&display=swap');
+
+$font-family-sans-serif : 'Montserrat', sans-serif;
+
+$primary : #0b8457;
+//$primary : $green;
+
+//nav scss
+$nav-link-padding-x : 20px !important;
+//$nav-link-font-weight : bold;
+$nav-link-font-size : 14px;
+$nav-link-hover-color : $primary !important;
+
+
+$btn-font-size : 12px;
+$btn-padding-x : 25px;
+$btn-padding-y : 10px;
+$btn-border-radius : 10px;
+
+$btn-border-radius-sm : 8px;
+$btn-font-size-sm : 9px;
+$btn-padding-y-sm : 10px;
+$btn-padding-x-sm : 10px;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "../node_modules/animate.css/animate.min.css";
+
+
+@font-face {
+  font-family: "ssmm";
+  src: url("../fonts/ssmm.ttf");
+}
+
+h1{
+
+}
+
+h4{
+
+}
+
+p{
+  font-family: 'Josefin Sans', 'ssmm', sans-serif;
+}
+
+
+.site-navbar{
+  z-index: 1010;
+}
+
+
+.navbar-brand-img{
+  transition: 0.5s;
+  height: 35px;
+}
+
+.nav-link{
+  border-radius: $btn-border-radius;
+}
+
+.nav-link.active{
+  color: $white !important;
+  background-color: $primary;
+  border-radius: $btn-border-radius;
+}
+
+.site-navbar:hover .navbar-brand-img{
+  transform: rotate(360deg);
+}
+
+.site-navbar-onscroll{
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: $box-shadow-sm;
+  backdrop-filter: blur(5px) contrast(180%);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-section-img{
+  cursor: url("../img/spoon.png"),auto;
+}
+
+.min-vh-50{
+  min-height: 50vh;
+}
+
+
+.min-vh-80{
+  min-height: 80vh;
+}
+
+.services-svg{
+  fill: $primary;
+}
+
+.dish-img{
+  transition: 0.5s;
+}
+.menu-card{
+  transition: 0.5s;
+}
+
+.menu-card:hover{
+  transform: translateY(-10px) !important;
+  box-shadow: $box-shadow;
+}
+
+.menu-card:hover .dish-img{
+  transform: rotate(20deg);
+}
+
+@media screen and (max-width: 576px) {
+
+  h1{
+
+  }
+
+  h4{
+    font-size: 18px;
+  }
+
+  p{
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+
+}
+
